@@ -203,7 +203,7 @@ def execute_grasp(env: piper_grasp_env.PiperGraspEnv, gg: GraspGroup):
     # World-to-camera transform
     n_wc = np.array([0.0, -1.0, 0.0])
     o_wc = np.array([-1.0, 0.0, -0.5])
-    t_wc = np.array([1.15, 0.6, 1.6])
+    t_wc = np.array([1, 0.6, 1.6])
     T_wc = sm.SE3.Trans(t_wc) * sm.SE3(sm.SO3.TwoVectors(x=n_wc, y=o_wc))
 
     # Camera-to-object transform (from grasp prediction)
